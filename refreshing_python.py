@@ -64,6 +64,24 @@ def add_expense(expenses):
     expenses.append(expense)
     save_expenses(expenses)
     print("Expense added successfully!")
+
+def list_expenses(expenses):
+    print("/n --- All Expenses ---")
+
+    if not expenses: 
+        print("No expenses recorded.")
+        return
+    
+    total = 0.0
+    print(f"{'ID':<4} {'Date':<12} {'Category':<15} {'Amount':<10} Description")
+    print("-" * 60)
+    for idx, exp in enumerate(expenses, starts = 1):
+        total += exp["amount"]
+        print(f"{idx:<4} {exp['date']:<12} {exp['category']:<15} ${exp['amount']:<10.2f} {exp['description']}")
+    print("-" * 60)
+    print(f"{'':<4} {'':<12} {'Total:':<15} ${total:<10.2f}")
+
+    
 def main(): 
 
     expenses = load_expenses()
