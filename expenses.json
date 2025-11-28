@@ -1,0 +1,20 @@
+[
+  {
+    "amount": 25.55,
+    "category": "food",
+    "description": "fast food moeny spent at wawa",
+    "date": "2025-11-23"
+  },
+  {
+    "amount": 35.0,
+    "category": "transport",
+    "description": "Uber from the bar",
+    "date": "2025-04-12"
+  },
+  {
+    "amount": 12.22,
+    "category": "Food",
+    "description": "Mcdonalds",
+    "date": "2025-04-04"
+  }
+]
