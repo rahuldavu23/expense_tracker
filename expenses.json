@@ -16,5 +16,11 @@
     "category": "Food",
     "description": "Mcdonalds",
     "date": "2025-04-04"
+  },
+  {
+    "amount": 34.5,
+    "category": "food",
+    "description": "wawa",
+    "date": "2025-11-22"
   }
 ]

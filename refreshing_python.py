@@ -75,13 +75,25 @@ def list_expenses(expenses):
     total = 0.0
     print(f"{'ID':<4} {'Date':<12} {'Category':<15} {'Amount':<10} Description")
     print("-" * 60)
-    for idx, exp in enumerate(expenses, starts = 1):
+    for idx, exp in enumerate(expenses, start = 1):
         total += exp["amount"]
         print(f"{idx:<4} {exp['date']:<12} {exp['category']:<15} ${exp['amount']:<10.2f} {exp['description']}")
     print("-" * 60)
     print(f"{'':<4} {'':<12} {'Total:':<15} ${total:<10.2f}")
 
-    
+    def summary_by_category(expenses):
+    print("\n--- Summary by Category ---")
+
+    if not expenses:
+        print("No expenses recorded.")
+        return
+
+    category_totals = {} 
+    for exp in expenses: 
+        print("No expenses recorded yet.")
+        category_totals[cat] = category_totals.get(cat, 0.0) + exp["amount"]
+
+
 def main(): 
 
     expenses = load_expenses()
